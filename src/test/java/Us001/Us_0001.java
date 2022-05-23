@@ -29,9 +29,7 @@ public class Us_0001 {
         driver = new ChromeDriver(capabilities);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.get("https://qa-environment.concorthotel.com");
-        driver.findElement(By.xpath("//*[@id='details-button']")).click();
-        driver.findElement(By.xpath("//*[@id='proceed-link']")).click();
+
 
     }
     @AfterClass
