@@ -15,12 +15,14 @@ import java.time.Duration;
 public class Us_0001 {
     static WebDriver driver;
   static  ChromeOptions options;
+    static Robot rbt;
 
     @BeforeClass
     public static void before() throws AWTException {
 
         WebDriverManager.chromedriver().setup();
         options = new ChromeOptions();
+        rbt = new Robot();
         options.addExtensions(new File("C:\\Program Files\\Google\\Chrome\\Application\\101.0.4951.67\\XPath-Plugin.crx"));
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
@@ -86,7 +88,6 @@ public class Us_0001 {
     @Test
     public void test5() throws AWTException, InterruptedException {
         driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-        Robot rbt =new Robot();
         rbt.mouseWheel(7);
         Thread.sleep(2000);
         WebElement welcome= driver.findElement(By.xpath("//h2[normalize-space()='Welcome To Our Hotel']"));
@@ -96,7 +97,6 @@ public class Us_0001 {
     @Test
     public void test6() throws AWTException, InterruptedException {
         driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-        Robot rbt =new Robot();
         rbt.mouseWheel(17);
         Thread.sleep(5000);
         WebElement ourRoom= driver.findElement(By.xpath("/html/body/section[5]/div/div[1]/div/h2"));
@@ -136,7 +136,6 @@ public class Us_0001 {
     @Test
     public void test7() throws AWTException, InterruptedException {
         driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-        Robot rbt =new Robot();
         rbt.mouseWheel(30);
         Thread.sleep(5000);
         WebElement consumer = driver.findElement(By.xpath("(//div[@class='owl-stage-outer'])[2]"));
@@ -152,7 +151,6 @@ public class Us_0001 {
 @Test
     public void test8() throws AWTException, InterruptedException {
     driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-    Robot rbt =new Robot();
     rbt.mouseWheel(37);
     Thread.sleep(5000);
     driver.findElement(By.xpath("(//div[@class='text mt-3 d-block'])[1]")).click();
@@ -168,7 +166,6 @@ public class Us_0001 {
     @Test
     public void test9() throws AWTException, InterruptedException {
         driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-        Robot rbt =new Robot();
         rbt.mouseWheel(44);
         Thread.sleep(2000);
         WebElement instagram=driver.findElement(By.xpath("//span[normalize-space()='Instagram']"));
@@ -198,7 +195,6 @@ public class Us_0001 {
     @Test
     public void test10() throws AWTException, InterruptedException {
         driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-        Robot rbt =new Robot();
         rbt.keyPress(KeyEvent.VK_END);
         Thread.sleep(2000);
         WebElement conHot= driver.findElement(By.xpath("//h2[normalize-space()='Concort Hotel']"));
