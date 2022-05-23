@@ -35,6 +35,7 @@ public class Us_0002 extends TestBase {
         //5-Username textbox'a Admin username girilmeli
         driver.findElement(By.xpath("//input[@id='UserName']")).sendKeys("Admin");
     }
+
     @Test
     public void test03() throws InterruptedException {
         //1-https://qa-environment.concorthotel.com/ sayfasına gidin
@@ -115,6 +116,6 @@ public class Us_0002 extends TestBase {
         driver.findElement(By.xpath("//input[@id='btnSubmit']")).click();
         //10-" ListOfUsers " yazısının görünürlüğünü kontrol edin
         WebElement listOfUsersYazisi = driver.findElement(By.xpath("//span[@class='caption-subject font-green-sharp bold uppercase']"));
-        Assert.assertTrue(listOfUsersYazisi.isDisplayed());
+         Assert.assertTrue(listOfUsersYazisi.isDisplayed());
     }
 }
