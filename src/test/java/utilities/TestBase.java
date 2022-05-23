@@ -18,8 +18,8 @@ import java.time.Duration;
 public abstract class TestBase {
     // abstract yapmamizin sebebi, bu class'dan obje uretilmesinin onune gecmektir.
     protected static WebDriver driver;
-    protected  static ChromeOptions options;
-    protected static Actions actions;
+    protected  static  ChromeOptions options;
+    protected static  Actions actions;
     @BeforeClass
     public static void setUp(){
         WebDriverManager.chromedriver().setup();
